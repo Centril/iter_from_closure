@@ -5,6 +5,8 @@ closures in the form `FnMut() -> Option<Item>`.
 
 Please read [the API documentation here].
 
+[![crates]][url: crates]
+
 ## Usage
 
 How to use with cargo:
@@ -21,14 +23,14 @@ extern crate itertools;
 
 use iter_from_closure::iter_from_closure;
 
-let mut count = 10;
+let mut count = 5;
 let iter = iter_from_closure(|| {
     let c = count;
     count = c - 1;
     if c > 0 { Some(c) } else { None }
 });
 
-println!("{:?}", iter.collect::<Vec<_>>());
+assert_eq!(vec![5, 4, 3, 2, 1], iter.collect::<Vec<_>>());
 ```
 
 ## Recent Changes
@@ -48,3 +50,6 @@ according to those terms.
 
 [Apache License, Version 2.0]: http://www.apache.org/licenses/LICENSE-2.0
 [MIT license]: http://opensource.org/licenses/MIT
+
+[crates]: http://img.shields.io/badge/crates.io-v1.0.0-orange.svg?style=flat-square
+[url: crates]: https://crates.io/crates/iter_from_closure
