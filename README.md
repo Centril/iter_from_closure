@@ -19,7 +19,7 @@ iter_from_closure = "1.0.0"
 How to use in your crate:
 
 ```rust
-extern crate itertools;
+extern crate iter_from_closure;
 
 use iter_from_closure::iter_from_closure;
 
