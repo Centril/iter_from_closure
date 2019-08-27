@@ -1,5 +1,7 @@
 # `iter_from_closure`
 
+**Note:** As of Rust 1.34.0, the standard library contains [`std::iter::from_fn`](https://doc.rust-lang.org/nightly/std/iter/fn.from_fn.html). If you can, prefer using that function instead of the one in this crate.
+
 `Iterator<Item = Item>` creation for one-time use iterators from mutable
 closures in the form `FnMut() -> Option<Item>`.
 
